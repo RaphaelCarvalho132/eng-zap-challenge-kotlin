@@ -1,8 +1,9 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/code
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: circleci/android:api-29
     steps:
       - checkout
       - run:
