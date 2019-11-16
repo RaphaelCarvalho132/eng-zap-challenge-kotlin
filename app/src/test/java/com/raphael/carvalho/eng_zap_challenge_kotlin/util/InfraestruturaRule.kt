@@ -9,8 +9,11 @@ import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.rules.ExternalResource
 
+/**
+ * Rule para configurar o MockWebServer
+ */
 class InfraestruturaRule : ExternalResource() {
-    private lateinit var server: MockWebServer
+    lateinit var server: MockWebServer
 
     override fun before() {
         super.before()
@@ -32,6 +35,10 @@ class InfraestruturaRule : ExternalResource() {
         super.after()
     }
 
+    /**
+     * Adicion na pilha a resposta, que e informada pelo [nomeArquivoResources], e o [statusCode]
+     * que sera retornada pelo MockWebServer
+     */
     fun adicionarRequisicao(statusCode: Int, nomeArquivoResources: String) {
         server.enqueue(
             MockResponse().apply {

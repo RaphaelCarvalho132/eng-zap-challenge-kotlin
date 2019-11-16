@@ -9,16 +9,30 @@ import org.junit.Rule
 import org.junit.Test
 import java.math.BigDecimal
 
+/**
+ * Testes unitarios do repository de listagem de imoveis
+ */
 class ListaImoveisRepositoryTest {
     @get:Rule
     val rule = InfraestruturaRule()
     private lateinit var repository: ListaImoveisRepository
 
+    /**
+     * Cria o repositorio apos a [InfraestruturaRule] configurar o MockWebServer
+     */
     @Before
     fun `configurar antes de cada teste`() {
         repository = ListaImoveisRepository()
     }
 
+    /**
+     * DADO QUE:
+     *  A API esteja respondedo corretamente
+     * QUANDO:
+     *  Requisitar a listagem de imoveis da pagina 1
+     * ENTAO:
+     *  Sera retornado a lista de imoveis presentes na pagina 1
+     */
     @Test
     fun `listarImoveis - ao listar os imoveis, deve retornar lista de imoveis em data class`() {
         rule.adicionarRequisicao(
@@ -30,6 +44,7 @@ class ListaImoveisRepositoryTest {
             repository.listarImoveis(1)
         }
 
+        Assert.assertEquals("/sources/source-1.json", rule.server.takeRequest().path)
         Assert.assertEquals(
             listarImoveisRespostaSimplificada(),
             imoveis
