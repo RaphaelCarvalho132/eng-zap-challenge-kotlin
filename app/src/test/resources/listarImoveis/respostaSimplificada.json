@@ -1,0 +1,38 @@
+[
+  {
+    "usableAreas": 360,
+    "listingType": "USED",
+    "createdAt": "2018-03-24T11:06:37.238Z",
+    "listingStatus": "ACTIVE",
+    "id": "53ad37eb6177",
+    "parkingSpaces": 4,
+    "updatedAt": "2018-03-25T11:06:37.238Z",
+    "owner": false,
+    "images": [
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic8.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic10.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic17.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic14.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic15.jpg"
+    ],
+    "address": {
+      "city": "São Paulo",
+      "neighborhood": "Real Parque",
+      "geoLocation": {
+        "precision": "ROOFTOP",
+        "location": {
+          "lon": -46.70559,
+          "lat": -23.606269
+        }
+      }
+    },
+    "bathrooms": 5,
+    "bedrooms": 4,
+    "pricingInfos": {
+      "yearlyIptu": "1500",
+      "price": "2200000",
+      "businessType": "SALE",
+      "monthlyCondoFee": "4100"
+    }
+  }
+]
