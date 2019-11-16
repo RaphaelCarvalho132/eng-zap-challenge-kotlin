@@ -20,7 +20,7 @@ class ListaImoveisRepositoryTest {
     }
 
     @Test
-    fun listarImoveis() {
+    fun `listarImoveis - ao listar os imoveis, deve retornar lista de imoveis em data class`() {
         rule.adicionarRequisicao(
             200,
             "listarImoveis/respostaSimplificada.json"
