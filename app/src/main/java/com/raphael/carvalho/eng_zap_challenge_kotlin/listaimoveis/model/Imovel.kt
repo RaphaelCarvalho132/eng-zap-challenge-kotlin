@@ -1,5 +1,8 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model
 
+/**
+ * Informacoes gerais do imovel
+ */
 data class Imovel(
     val address: Address,
     val bathrooms: Int,

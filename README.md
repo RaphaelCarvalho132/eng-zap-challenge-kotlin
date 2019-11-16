@@ -5,9 +5,7 @@
 [![codebeat badge](https://codebeat.co/badges/b863da26-a319-4311-89e6-cf42ab7387a6)](https://codebeat.co/a/raphael-carvalho/projects/github-com-raphaelcarvalho132-eng-zap-challenge-kotlin-master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2054fe4ed2cd4e41b8652c6a336eb774)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RaphaelCarvalho132/eng-zap-challenge-kotlin&amp;utm_campaign=Badge_Grade)
 
-
-License
---------
+# License
 
     The MIT License (MIT)
 
