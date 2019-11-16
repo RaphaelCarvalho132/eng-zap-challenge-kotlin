@@ -23,3 +23,4 @@ jobs:
       - run:
           name: Check code style
           command: ./gradlew clean ktlintCheck --no-daemon
+          #TODO criar etapa de testes unitarios
