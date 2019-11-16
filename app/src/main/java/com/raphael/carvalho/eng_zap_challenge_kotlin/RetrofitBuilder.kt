@@ -22,7 +22,8 @@ object RetrofitBuilder {
         val logging = HttpLoggingInterceptor(
             object : HttpLoggingInterceptor.Logger {
                 override fun log(message: String) {
-                    TODO("vincular com o Timber - Timber.tag(\"OkHttp\").d(message);") //To change body of created functions use File | Settings | File Templates.
+                    TODO("vincular com o Timber - Timber.tag(\"OkHttp\").d(message);")
+                    // To change body of created functions use File | Settings | File Templates.
                 }
             }
         ).apply {
