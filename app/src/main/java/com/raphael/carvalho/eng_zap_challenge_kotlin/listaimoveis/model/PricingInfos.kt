@@ -7,5 +7,15 @@ data class PricingInfos(
     val businessType: String,
     val monthlyCondoFee: String,
     val price: String,
-    val yearlyIptu: String
-)
+    val yearlyIptu: String,
+    val period: String? = null,
+    val rentalTotalPrice: String? = null
+) {
+    /**
+     * Informacoes sobre o enum da variavel [businessType]
+     */
+    companion object BusinessType {
+        const val VENDA = "SALE"
+        const val ALUGUEL = "RENTAL"
+    }
+}

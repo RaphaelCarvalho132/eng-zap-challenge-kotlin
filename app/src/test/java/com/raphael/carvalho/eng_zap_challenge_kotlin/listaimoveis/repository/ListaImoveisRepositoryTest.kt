@@ -1,29 +1,24 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository
 
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.*
-import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfraestruturaRule
+import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfraestruturaLifeCycleExtensions
+import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfraestruturaLifeCycleExtensions.adicionarRequisicao
+import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfraestruturaLifeCycleExtensions.server
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert
-import org.junit.Before
-import org.junit.Rule
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
+import org.junit.jupiter.api.extension.Extensions
 import java.math.BigDecimal
 
 /**
  * Testes unitarios do repository de listagem de imoveis
  */
+@Extensions(
+    ExtendWith(InfraestruturaLifeCycleExtensions::class)
+)
 class ListaImoveisRepositoryTest {
-    @get:Rule
-    val rule = InfraestruturaRule()
-    private lateinit var repository: ListaImoveisRepository
-
-    /**
-     * Cria o repositorio apos a [InfraestruturaRule] configurar o MockWebServer
-     */
-    @Before
-    fun `configurar antes de cada teste`() {
-        repository = ListaImoveisRepository()
-    }
+    private val repository = ListaImoveisRepository()
 
     /**
      * DADO QUE:
@@ -35,7 +30,7 @@ class ListaImoveisRepositoryTest {
      */
     @Test
     fun `listarImoveis - ao listar os imoveis, deve retornar lista de imoveis em data class`() {
-        rule.adicionarRequisicao(
+        adicionarRequisicao(
             200,
             "listarImoveis/respostaSimplificada.json"
         )
@@ -44,7 +39,9 @@ class ListaImoveisRepositoryTest {
             repository.listarImoveis(1)
         }
 
-        Assert.assertEquals("/sources/source-1.json", rule.server.takeRequest().path)
+        Assert.assertEquals(
+            "/sources/source-1.json", server.takeRequest().path
+        )
         Assert.assertEquals(
             listarImoveisRespostaSimplificada(),
             imoveis

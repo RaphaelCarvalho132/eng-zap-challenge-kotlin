@@ -19,6 +19,8 @@ buildscript {
         // que deleta o arquivo que possui 2 enter seguidos
         //noinspection GradleDependency
         classpath "org.jlleitschuh.gradle:ktlint-gradle:8.1.0"
+
+        classpath "de.mannodermaus.gradle.plugins:android-junit5:1.5.2.0"
     }
 }
 

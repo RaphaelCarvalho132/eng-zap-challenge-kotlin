@@ -1,5 +1,7 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model
 
+import java.math.BigDecimal
+
 /**
  * Informacoes gerais do imovel
  */
@@ -18,3 +20,10 @@ data class Imovel(
     val updatedAt: String,
     val usableAreas: Int
 )
+
+/**
+ * Retorna o valor por M2 do Imovel
+ * @throws ArithmeticException quando [Imovel.usableAreas] == 0
+ */
+val Imovel.valorM2: BigDecimal
+    get() = BigDecimal(pricingInfos.price) / BigDecimal(usableAreas)
