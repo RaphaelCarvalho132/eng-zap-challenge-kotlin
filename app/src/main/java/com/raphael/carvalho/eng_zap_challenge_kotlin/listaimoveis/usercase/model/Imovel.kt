@@ -9,4 +9,16 @@ data class Imovel(
     val qtdVagas: Int,
     val areaM2: Int,
     val detalhesImovel: DetalhesImovel
-)
+) {
+    val arredoresGrupoZAP: Boolean
+        get() {
+            TODO(
+                """IMPLEMENTAR REGRAS
+            |ZAP:
+            |Quando o imóvel estiver dentro do bounding box dos arredores do Grupo ZAP (descrito abaixo) considere a regra de valor mínimo (do imóvel) 10% menor.
+            |Viva Real:
+            |Quando o imóvel estiver dentro do bounding box dos arredores do Grupo ZAP (descrito abaixo) considere a regra de valor máximo (do aluguel do imóvel) 50% maior.
+        """.trimMargin()
+            )
+        }
+}
