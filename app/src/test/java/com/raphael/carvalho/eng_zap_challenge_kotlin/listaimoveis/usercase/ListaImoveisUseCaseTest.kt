@@ -37,7 +37,6 @@ class ListaImoveisUseCaseTest {
         val useCase = ListaImoveisUseCase()
         val mapImoveis = runBlocking { useCase.listarImoveis() }
 
-
         assertEquals("/sources/source-1.json", server.takeRequest().path)
         assertEquals(
             mapOf(

@@ -3,7 +3,6 @@ package com.raphael.carvalho.eng_zap_challenge_kotlin.util
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-
 /**
  * Classe util para acessar arquivos nos resources
  */
