@@ -6,7 +6,7 @@ import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.PricingI
 import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfoTeste
 import io.mockk.every
 import io.mockk.mockk
-import org.junit.Assert.assertEquals
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.DynamicTest.dynamicTest
 import org.junit.jupiter.api.TestFactory
 import java.math.BigDecimal

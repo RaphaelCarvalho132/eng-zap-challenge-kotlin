@@ -5,7 +5,7 @@ import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfraestruturaLifeCycl
 import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfraestruturaLifeCycleExtensions.adicionarRequisicao
 import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfraestruturaLifeCycleExtensions.server
 import kotlinx.coroutines.runBlocking
-import org.junit.Assert
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.extension.Extensions
@@ -39,10 +39,10 @@ class ListaImoveisRepositoryTest {
             repository.listarImoveis(1)
         }
 
-        Assert.assertEquals(
+        assertEquals(
             "/sources/source-1.json", server.takeRequest().path
         )
-        Assert.assertEquals(
+        assertEquals(
             listarImoveisRespostaSimplificada(),
             imoveis
         )
