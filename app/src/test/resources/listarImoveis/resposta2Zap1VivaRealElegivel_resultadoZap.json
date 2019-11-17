@@ -1,0 +1,36 @@
+[
+  {
+    "tipoNegocio": "SALE",
+    "valor": "480000",
+    "qtdQuartos": 3,
+    "qtdBanheiros": 2,
+    "qtdVagas": 1,
+    "areaM2": 75,
+    "detalhesImovel": {
+      "images": [
+        "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic7.jpg"
+      ],
+      "cidade": "São Paulo",
+      "bairro": "Vila Brasilio Machado",
+      "latitude": -23.609441,
+      "longitude": -46.614014
+    }
+  },
+  {
+    "tipoNegocio": "SALE",
+    "valor": "2200000",
+    "qtdQuartos": 4,
+    "qtdBanheiros": 5,
+    "qtdVagas": 4,
+    "areaM2": 360,
+    "detalhesImovel": {
+      "images": [
+        "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic8.jpg"
+      ],
+      "cidade": "São Paulo",
+      "bairro": "Real Parque",
+      "latitude": -23.606269,
+      "longitude": -46.70559
+    }
+  }
+]

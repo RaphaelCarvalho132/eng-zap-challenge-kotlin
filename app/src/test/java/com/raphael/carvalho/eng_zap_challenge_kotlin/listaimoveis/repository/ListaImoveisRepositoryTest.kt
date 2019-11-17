@@ -49,7 +49,7 @@ class ListaImoveisRepositoryTest {
     }
 
     private fun listarImoveisRespostaSimplificada() = listOf(
-        Imovel(
+        ImovelVO(
             criarAddressRespostaSimplificada(),
             5,
             4,
@@ -66,10 +66,10 @@ class ListaImoveisRepositoryTest {
         )
     )
 
-    private fun criarAddressRespostaSimplificada() = Address(
+    private fun criarAddressRespostaSimplificada() = AddressVO(
         "São Paulo",
-        GeoLocation(
-            Location(
+        GeoLocationVO(
+            LocationVO(
                 lat = BigDecimal("-23.606269"),
                 lon = BigDecimal("-46.70559")
             ),
@@ -86,7 +86,7 @@ class ListaImoveisRepositoryTest {
         "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic15.jpg"
     )
 
-    private fun criarPricingInfosRespostaSimplificada() = PricingInfos(
+    private fun criarPricingInfosRespostaSimplificada() = PricingInfosVO(
         "SALE",
         "4100",
         "2200000",

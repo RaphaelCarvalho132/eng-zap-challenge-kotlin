@@ -5,7 +5,7 @@ import java.math.BigDecimal
 /**
  * informacoes de latitude e longitude do imovel
  */
-data class Location(
+data class LocationVO(
     val lat: BigDecimal,
     val lon: BigDecimal
 )

@@ -3,8 +3,8 @@ package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model
 /**
  * Endereco do imovel
  */
-data class Address(
+data class AddressVO(
     val city: String,
-    val geoLocation: GeoLocation,
+    val geoLocation: GeoLocationVO,
     val neighborhood: String
 )

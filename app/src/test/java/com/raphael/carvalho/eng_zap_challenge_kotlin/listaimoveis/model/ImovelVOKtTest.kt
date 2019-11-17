@@ -10,9 +10,9 @@ import org.junit.jupiter.api.TestFactory
 import java.math.BigDecimal
 
 /**
- * Testa a extension em Imovel
+ * Testa a extension em ImovelVO
  */
-class ImovelKtTest {
+class ImovelVOKtTest {
     /**
      * Testa erro ao possuir uma area usavel igual a 0
      */
@@ -41,11 +41,11 @@ class ImovelKtTest {
             }
         }
 
-    private fun criarImove(price: String, usableAreas: Int): Imovel {
-        val pricingInfos = mockk<PricingInfos>()
+    private fun criarImove(price: String, usableAreas: Int): ImovelVO {
+        val pricingInfos = mockk<PricingInfosVO>()
         every { pricingInfos.price } returns price
 
-        val imovel = mockk<Imovel>()
+        val imovel = mockk<ImovelVO>()
         every { imovel.pricingInfos } returns pricingInfos
         every { imovel.usableAreas } returns usableAreas
 

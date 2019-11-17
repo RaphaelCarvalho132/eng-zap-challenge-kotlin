@@ -1,0 +1,20 @@
+[
+  {
+    "tipoNegocio": "RENTAL",
+    "valor": "3500",
+    "periodo": "MONTHLY",
+    "qtdQuartos": 3,
+    "qtdBanheiros": 3,
+    "qtdVagas": 1,
+    "areaM2": 77,
+    "detalhesImovel": {
+      "images": [
+        "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic19.jpg"
+      ],
+      "cidade": "São Paulo",
+      "bairro": "Campo Belo",
+      "latitude": -23.553518,
+      "longitude": -46.659002
+    }
+  }
+]

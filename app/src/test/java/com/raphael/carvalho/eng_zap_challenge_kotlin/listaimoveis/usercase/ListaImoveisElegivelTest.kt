@@ -1,8 +1,8 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase
 
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.*
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.PricingInfos.BusinessType.ALUGUEL
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.PricingInfos.BusinessType.VENDA
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.PricingInfosVO.BusinessType.ALUGUEL
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.PricingInfosVO.BusinessType.VENDA
 import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfoTeste
 import io.mockk.every
 import io.mockk.mockk
@@ -114,8 +114,8 @@ class ListaImoveisElegivelTest {
         price: String,
         usableAreas: Int,
         monthlyCondoFee: String
-    ): Imovel {
-        val imovel = mockk<Imovel>()
+    ): ImovelVO {
+        val imovel = mockk<ImovelVO>()
         every { imovel.address } returns criarAddressElegivel(lat, lon)
         every { imovel.pricingInfos } returns criarPricingInfos(tipoNegocio, price, monthlyCondoFee)
         every { imovel.usableAreas } returns usableAreas
@@ -123,15 +123,15 @@ class ListaImoveisElegivelTest {
         return imovel
     }
 
-    private fun criarAddressElegivel(lat: BigDecimal, lon: BigDecimal): Address {
-        val location = mockk<Location>()
+    private fun criarAddressElegivel(lat: BigDecimal, lon: BigDecimal): AddressVO {
+        val location = mockk<LocationVO>()
         every { location.lat } returns lat
         every { location.lon } returns lon
 
-        val geoLocation = mockk<GeoLocation>()
+        val geoLocation = mockk<GeoLocationVO>()
         every { geoLocation.location } returns location
 
-        val address = mockk<Address>()
+        val address = mockk<AddressVO>()
         every { address.geoLocation } returns geoLocation
 
         return address
@@ -141,8 +141,8 @@ class ListaImoveisElegivelTest {
         tipoNegocio: String,
         price: String,
         monthlyCondoFee: String
-    ): PricingInfos {
-        val pricingInfos = mockk<PricingInfos>()
+    ): PricingInfosVO {
+        val pricingInfos = mockk<PricingInfosVO>()
         every { pricingInfos.businessType } returns tipoNegocio
         every { pricingInfos.price } returns price
         every { pricingInfos.monthlyCondoFee } returns monthlyCondoFee
