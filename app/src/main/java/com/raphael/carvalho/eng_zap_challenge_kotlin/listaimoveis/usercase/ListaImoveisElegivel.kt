@@ -10,7 +10,7 @@ import java.math.BigDecimal
 /**
  * Classe que lista os imoveis elegiveis de uma forma generica
  */
-internal sealed class ListaImoveisElegivel {
+sealed class ListaImoveisElegivel {
     /**
      * Regra geral de elegibilidade
      */
@@ -27,7 +27,7 @@ internal sealed class ListaImoveisElegivel {
 /**
  * Classe que lista os imoveis elegiveis pela ZAP imoveis
  */
-internal object ListaZAPElegivel : ListaImoveisElegivel() {
+object ListaZAPElegivel : ListaImoveisElegivel() {
     private val menorValorM2NaoIncluso = BigDecimal("3500")
 
     /**
@@ -50,7 +50,7 @@ internal object ListaZAPElegivel : ListaImoveisElegivel() {
 /**
  * Classe que lista os imoveis elegiveis pela Viva Real
  */
-internal object ListaVivaRealElegivel : ListaImoveisElegivel() {
+object ListaVivaRealElegivel : ListaImoveisElegivel() {
     // Porcentagem do valor do alguel maximo, nao incluso,
     // em relacao ao valor do condominio elegivel
     private val _30PorCento = BigDecimal("0.3")
