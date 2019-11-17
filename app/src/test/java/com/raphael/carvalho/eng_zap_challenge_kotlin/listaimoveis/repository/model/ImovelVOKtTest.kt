@@ -1,4 +1,4 @@
-package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model
+package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model
 
 import io.mockk.every
 import io.mockk.mockk

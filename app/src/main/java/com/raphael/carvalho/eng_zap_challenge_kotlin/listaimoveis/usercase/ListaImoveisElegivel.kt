@@ -1,10 +1,10 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase
 
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.ImovelVO
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.PricingInfosVO
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.PricingInfosVO.BusinessType.ALUGUEL
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.PricingInfosVO.BusinessType.VENDA
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.valorM2
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.ImovelVO
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.PricingInfosVO
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.PricingInfosVO.BusinessType.ALUGUEL
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.PricingInfosVO.BusinessType.VENDA
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.valorM2
 import java.math.BigDecimal
 
 /**

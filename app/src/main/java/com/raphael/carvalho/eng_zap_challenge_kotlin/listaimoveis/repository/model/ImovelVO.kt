@@ -1,4 +1,4 @@
-package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model
+package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model
 
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.DetalhesImovel
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.Imovel

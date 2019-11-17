@@ -1,8 +1,8 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase
 
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.*
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.PricingInfosVO.BusinessType.ALUGUEL
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.PricingInfosVO.BusinessType.VENDA
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.*
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.PricingInfosVO.BusinessType.ALUGUEL
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.PricingInfosVO.BusinessType.VENDA
 import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfoTeste
 import io.mockk.every
 import io.mockk.mockk

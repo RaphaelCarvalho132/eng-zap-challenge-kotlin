@@ -1,6 +1,6 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository
 
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.ImovelVO
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.ImovelVO
 import retrofit2.http.GET
 import retrofit2.http.Path
 

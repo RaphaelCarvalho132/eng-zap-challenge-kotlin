@@ -1,8 +1,8 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase
 
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.ImovelVO
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.toImove
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.ListaImoveisRepository
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.ImovelVO
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.toImove
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.Imovel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.async

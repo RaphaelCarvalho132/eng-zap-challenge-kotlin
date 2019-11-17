@@ -1,6 +1,6 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository
 
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model.*
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.*
 import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfraestruturaLifeCycleExtensions
 import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfraestruturaLifeCycleExtensions.adicionarRequisicao
 import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfraestruturaLifeCycleExtensions.server
