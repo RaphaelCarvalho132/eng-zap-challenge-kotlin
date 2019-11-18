@@ -6,7 +6,7 @@ import java.math.BigDecimal
  * Classe com regra do ZAP
  */
 data class ImovelZAP(
-    private val tipoNegocio: String,
+    override val tipoNegocio: String,
     private val valor: String,
     private val periodo: String?,
     override val qtdQuartos: Int,

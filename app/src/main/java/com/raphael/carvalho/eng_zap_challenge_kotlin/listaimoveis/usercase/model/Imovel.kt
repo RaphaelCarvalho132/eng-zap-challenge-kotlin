@@ -6,6 +6,7 @@ import java.math.BigDecimal
  * Atributos dos imoveis do viva real e da ZAP
  */
 interface Imovel {
+    val tipoNegocio: String
     val valorImovel: BigDecimal
     val qtdQuartos: Int
     val qtdBanheiros: Int

@@ -6,7 +6,7 @@ import java.math.BigDecimal
  * Classe com regra do Viva Real
  */
 data class ImovelVivaReal(
-    private val tipoNegocio: String,
+    override val tipoNegocio: String,
     private val valor: String,
     private val periodo: String?,
     override val qtdQuartos: Int,
