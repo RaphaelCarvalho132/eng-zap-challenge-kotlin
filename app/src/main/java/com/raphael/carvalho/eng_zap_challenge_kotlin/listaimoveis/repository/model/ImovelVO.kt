@@ -1,7 +1,7 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model
 
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.ListaImoveisElegivel
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.DetalhesImovel
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.Imovel
 import java.math.BigDecimal
 
 /**
@@ -30,19 +30,20 @@ data class ImovelVO(
 val ImovelVO.valorM2: BigDecimal
     get() = BigDecimal(pricingInfos.price) / BigDecimal(usableAreas)
 
-fun ImovelVO.toImove() = Imovel(
-    pricingInfos.businessType,
-    pricingInfos.price,
-    pricingInfos.period,
-    bedrooms,
-    bathrooms,
-    parkingSpaces,
-    usableAreas,
-    DetalhesImovel(
-        images,
-        address.city,
-        address.neighborhood,
-        address.geoLocation.location.lat,
-        address.geoLocation.location.lon
+fun ImovelVO.toImove(listaImoveisElegivel: ListaImoveisElegivel) =
+    listaImoveisElegivel.criarImovel(
+        pricingInfos.businessType,
+        pricingInfos.price,
+        pricingInfos.period,
+        bedrooms,
+        bathrooms,
+        parkingSpaces,
+        usableAreas,
+        DetalhesImovel(
+            images,
+            address.city,
+            address.neighborhood,
+            address.geoLocation.location.lat,
+            address.geoLocation.location.lon
+        )
     )
-)

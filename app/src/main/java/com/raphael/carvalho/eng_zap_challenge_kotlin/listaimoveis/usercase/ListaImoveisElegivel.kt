@@ -5,6 +5,10 @@ import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.mod
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.PricingInfosVO.BusinessType.ALUGUEL
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.PricingInfosVO.BusinessType.VENDA
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.valorM2
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.DetalhesImovel
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.Imovel
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.ImovelVivaReal
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.ImovelZAP
 import java.math.BigDecimal
 
 /**
@@ -22,6 +26,17 @@ sealed class ListaImoveisElegivel {
 
         return !(latitudeEh0 && longitudeEh0)
     }
+
+    abstract fun criarImovel(
+        tipoNegocio: String,
+        valor: String,
+        periodo: String?,
+        qtdQuartos: Int,
+        qtdBanheiros: Int,
+        qtdVagas: Int,
+        areaM2: Int,
+        detalhesImovel: DetalhesImovel
+    ): Imovel
 }
 
 /**
@@ -45,6 +60,26 @@ object ListaZAPElegivel : ListaImoveisElegivel() {
         return usableAreas != 0 &&
                 valorM2 > menorValorM2NaoIncluso
     }
+
+    override fun criarImovel(
+        tipoNegocio: String,
+        valor: String,
+        periodo: String?,
+        qtdQuartos: Int,
+        qtdBanheiros: Int,
+        qtdVagas: Int,
+        areaM2: Int,
+        detalhesImovel: DetalhesImovel
+    ) = ImovelZAP(
+        tipoNegocio,
+        valor,
+        periodo,
+        qtdQuartos,
+        qtdBanheiros,
+        qtdVagas,
+        areaM2,
+        detalhesImovel
+    )
 }
 
 /**
@@ -77,4 +112,24 @@ object ListaVivaRealElegivel : ListaImoveisElegivel() {
                         valorCondominio < valorMaxCondominoNaoIncluso
             } ?: false
     }
+
+    override fun criarImovel(
+        tipoNegocio: String,
+        valor: String,
+        periodo: String?,
+        qtdQuartos: Int,
+        qtdBanheiros: Int,
+        qtdVagas: Int,
+        areaM2: Int,
+        detalhesImovel: DetalhesImovel
+    ) = ImovelVivaReal(
+        tipoNegocio,
+        valor,
+        periodo,
+        qtdQuartos,
+        qtdBanheiros,
+        qtdVagas,
+        areaM2,
+        detalhesImovel
+    )
 }

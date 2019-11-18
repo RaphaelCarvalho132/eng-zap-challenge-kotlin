@@ -1,6 +1,7 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase
 
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.Imovel
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.ImovelVivaReal
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.ImovelZAP
 import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfraestruturaLifeCycleExtensions
 import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfraestruturaLifeCycleExtensions.adicionarRequisicao
 import com.raphael.carvalho.eng_zap_challenge_kotlin.util.InfraestruturaLifeCycleExtensions.server
@@ -40,8 +41,9 @@ class ListaImoveisUseCaseTest {
         assertEquals("/sources/source-1.json", server.takeRequest().path)
         assertEquals(
             mapOf(
-                ListaZAPElegivel to lerArquivo<List<Imovel>>(RESULTADO_ZAP_ELEGIVEIS),
-                ListaVivaRealElegivel to lerArquivo<List<Imovel>>(RESULTADO_VIVA_REAL_ELEGIVEIS)
+                ListaZAPElegivel to lerArquivo<List<ImovelZAP>>(RESULTADO_ZAP_ELEGIVEIS),
+                ListaVivaRealElegivel to
+                        lerArquivo<List<ImovelVivaReal>>(RESULTADO_VIVA_REAL_ELEGIVEIS)
             ),
             mapImoveis
         )
@@ -65,9 +67,10 @@ class ListaImoveisUseCaseTest {
         assertEquals(
             mapOf(
                 ListaZAPElegivel to
-                        lerArquivo<List<Imovel>>(RESULTADO_ZAP_ELEGIVEIS).duplicarLista(),
+                        lerArquivo<List<ImovelZAP>>(RESULTADO_ZAP_ELEGIVEIS).duplicarLista(),
                 ListaVivaRealElegivel to
-                        lerArquivo<List<Imovel>>(RESULTADO_VIVA_REAL_ELEGIVEIS).duplicarLista()
+                        lerArquivo<List<ImovelVivaReal>>(RESULTADO_VIVA_REAL_ELEGIVEIS)
+                            .duplicarLista()
             ),
             mapImoveis
         )

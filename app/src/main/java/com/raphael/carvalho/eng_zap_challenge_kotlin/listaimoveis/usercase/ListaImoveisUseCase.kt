@@ -42,8 +42,8 @@ class ListaImoveisUseCase(
         listaImoveisElegivel: ListaImoveisElegivel,
         imoveis: List<ImovelVO>
     ) = async {
-        listaImoveisElegivel to imoveis.filter { imovel ->
-            listaImoveisElegivel.ehElegivel(imovel)
-        }.map { imovel -> imovel.toImove() }
+        listaImoveisElegivel to imoveis.filter { imovelVO ->
+            listaImoveisElegivel.ehElegivel(imovelVO)
+        }.map { imovelVO -> imovelVO.toImove(listaImoveisElegivel) }
     }
 }
