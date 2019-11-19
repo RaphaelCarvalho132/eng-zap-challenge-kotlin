@@ -18,6 +18,7 @@ import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.fragment.adapt
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.Imovel
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.viewmodel.ListaImoveisEstados.*
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.viewmodel.ListaImoveisViewModel
+import timber.log.Timber
 
 class ListaImoveisFragment : Fragment() {
     companion object {
@@ -33,7 +34,7 @@ class ListaImoveisFragment : Fragment() {
 
     private lateinit var viewModel: ListaImoveisViewModel
     private lateinit var listener: OnImovelSelecionado
-    private var ehZapImoveis: Boolean = false
+    private var ehZapImoveis: Boolean = true
 
     private lateinit var adapter: ListaImoveisAdapter
 
@@ -48,8 +49,11 @@ class ListaImoveisFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_lista_imoveis, container, false)
         initViews(view)
 
-        check(arguments?.containsKey(ARG_EH_ZAP_IMOVEIS) == true) { "Argumento nao informado" }
-        ehZapImoveis = arguments!!.getBoolean(ARG_EH_ZAP_IMOVEIS)
+        if (arguments?.containsKey(ARG_EH_ZAP_IMOVEIS) != true) {
+            Timber.tag("ListaImoveis")
+                .w("Argumento nao informado: '$ARG_EH_ZAP_IMOVEIS'")
+        }
+        ehZapImoveis = arguments?.getBoolean(ARG_EH_ZAP_IMOVEIS, true) ?: true
 
         return view
     }

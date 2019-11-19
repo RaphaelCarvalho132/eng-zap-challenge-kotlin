@@ -20,9 +20,13 @@
             android:label="@string/activity_listas_imoveis">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".listaimoveis.activity.ImovelActivity"
+            android:label="@string/activity_imovel" />
     </application>
 
 </manifest>

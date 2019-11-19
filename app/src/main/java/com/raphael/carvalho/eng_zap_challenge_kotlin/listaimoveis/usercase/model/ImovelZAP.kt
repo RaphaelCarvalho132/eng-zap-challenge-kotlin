@@ -1,11 +1,13 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model
 
 import androidx.annotation.StringRes
+import kotlinx.android.parcel.Parcelize
 import java.math.BigDecimal
 
 /**
  * Classe com regra do ZAP
  */
+@Parcelize
 data class ImovelZAP(
     private val tipoNegocio: TipoNegocio,
     private val valor: String,

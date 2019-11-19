@@ -1,5 +1,6 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
@@ -8,9 +9,11 @@ import com.google.android.material.tabs.TabLayout
 import com.raphael.carvalho.eng_zap_challenge_kotlin.R
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.activity.adapter.ListasImoveisVPAdapter
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.activity.adapter.ListasImoveisVPAdapter.ListaImoveis
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.fragment.ImovelFragment
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.fragment.ListaImoveisFragment.OnImovelSelecionado
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.Imovel
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.viewmodel.ListaImoveisViewModel
+import com.raphael.carvalho.eng_zap_challenge_kotlin.util.findFragmentById
 
 class ListaImoveisActivity : AppCompatActivity(), OnImovelSelecionado {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,7 +46,12 @@ class ListaImoveisActivity : AppCompatActivity(), OnImovelSelecionado {
     }
 
     override fun onImovelSelecionado(imovel: Imovel) {
-//        if ()
-        TODO("not implemented") // To change body of created functions use File | Settings | File Templates.
+        val fragment = findFragmentById<ImovelFragment>(R.id.f_imovel)
+
+        if (fragment == null) {
+            val intent = Intent(this, ImovelActivity::class.java)
+            ImovelActivity.configurarExtras(intent, imovel)
+            startActivity(intent)
+        } else fragment.bind(imovel)
     }
 }

@@ -11,10 +11,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f_imovel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.4">
-        <!--        app:layout_constraintEnd_toStartOf="@+id/f_detalhe_imovel"-->
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tl_abas"
@@ -22,14 +22,14 @@
             android:layout_height="wrap_content" />
     </androidx.viewpager.widget.ViewPager>
 
-    <!--    <fragment-->
-    <!--        android:id="@+id/f_detalhe_imovel"-->
-    <!--        android:name=""-->
-    <!--        android:layout_width="0dp"-->
-    <!--        android:layout_height="0dp"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toEndOf="@+id/vp_paginas"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-    <!--        tools:layout="@layout/fragment_lista_imoveis" />-->
+    <fragment
+        android:id="@+id/f_imovel"
+        android:name="com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.fragment.ImovelFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vp_paginas"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_imovel" />
 </androidx.constraintlayout.widget.ConstraintLayout>

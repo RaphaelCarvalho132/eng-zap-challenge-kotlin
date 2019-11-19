@@ -1,13 +1,15 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model
 
+import android.os.Parcelable
 import androidx.annotation.StringRes
 import com.raphael.carvalho.eng_zap_challenge_kotlin.R
+import kotlinx.android.parcel.Parcelize
 import java.math.BigDecimal
 
 /**
  * Atributos dos imoveis do viva real e da ZAP
  */
-interface Imovel {
+interface Imovel : Parcelable {
     @get:StringRes
     val nomeNegocio: Int
     val valorImovel: BigDecimal
@@ -27,7 +29,7 @@ interface Imovel {
     }
 }
 
-sealed class TipoNegocio {
+sealed class TipoNegocio : Parcelable {
     companion object {
         fun getTipoNegocio(tipoNegocio: String) = when (tipoNegocio) {
             Venda.TIPO_NEGOCIO -> Venda
@@ -36,13 +38,16 @@ sealed class TipoNegocio {
         }
     }
 
+    @Parcelize
     object Venda : TipoNegocio() {
         const val TIPO_NEGOCIO = "SALE"
     }
 
+    @Parcelize
     object Aluguel : TipoNegocio() {
         const val TIPO_NEGOCIO = "RENTAL"
     }
 
+    @Parcelize
     object Desconhecido : TipoNegocio()
 }

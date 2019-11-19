@@ -15,4 +15,5 @@
     <string name="nome_negocio_a_venda">à venda</string>
     <string name="nome_negocio_alugar">alugar</string>
     <string name="nome_negocio_desconhecido">desconhecido</string>
+    <string name="activity_imovel">Imóvel</string>
 </resources>
