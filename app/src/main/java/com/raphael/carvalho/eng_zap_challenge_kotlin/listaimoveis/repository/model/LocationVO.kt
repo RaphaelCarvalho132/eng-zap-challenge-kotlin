@@ -1,11 +1,11 @@
-package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.model
+package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model
 
 import java.math.BigDecimal
 
 /**
  * informacoes de latitude e longitude do imovel
  */
-data class Location(
+data class LocationVO(
     val lat: BigDecimal,
     val lon: BigDecimal
 )

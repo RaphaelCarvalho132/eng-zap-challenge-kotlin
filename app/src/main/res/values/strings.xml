@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">eng-zap-challenge-kotlin</string>
+    <string name="activity_listas_imoveis">Listas de Imóveis</string>
+
+    <string name="tab_zap">ZAP</string>
+    <string name="tab_viva_real">Viva Real</string>
+    <string name="erro_de_carregamento">Erro de carregamento</string>
+
+    <string name="valor_imovel_1s">Valor: %1$s</string>
+    <string name="qtd_quartos_1d">Quartos: %1$d</string>
+    <string name="qtd_banheiros_1d">Banheiros: %1$d</string>
+    <string name="qtd_vagas_1d">Vagas: %1$d</string>
+    <string name="m2_1d">%1$dm²</string>
+
+    <string name="nome_negocio_a_venda">à venda</string>
+    <string name="nome_negocio_alugar">alugar</string>
+    <string name="nome_negocio_desconhecido">desconhecido</string>
+    <string name="activity_imovel">Imóvel</string>
 </resources>

@@ -1,22 +1,24 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.util
 
 import com.raphael.carvalho.eng_zap_challenge_kotlin.RetrofitBuilder
+import com.raphael.carvalho.eng_zap_challenge_kotlin.util.Resources.lerArquivo
 import io.mockk.every
 import io.mockk.mockkObject
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
-import org.junit.rules.ExternalResource
+import org.junit.jupiter.api.extension.AfterAllCallback
+import org.junit.jupiter.api.extension.BeforeAllCallback
+import org.junit.jupiter.api.extension.ExtensionContext
 
 /**
  * Rule para configurar o MockWebServer
  */
-class InfraestruturaRule : ExternalResource() {
+object InfraestruturaLifeCycleExtensions : BeforeAllCallback, AfterAllCallback {
     lateinit var server: MockWebServer
 
-    override fun before() {
-        super.before()
+    override fun beforeAll(context: ExtensionContext?) {
         server = MockWebServer()
 
         val httpClient = OkHttpClient.Builder()
@@ -30,9 +32,8 @@ class InfraestruturaRule : ExternalResource() {
         )
     }
 
-    override fun after() {
+    override fun afterAll(context: ExtensionContext?) {
         server.shutdown()
-        super.after()
     }
 
     /**
@@ -43,12 +44,7 @@ class InfraestruturaRule : ExternalResource() {
         server.enqueue(
             MockResponse().apply {
                 setResponseCode(statusCode)
-                setBody(
-                    javaClass
-                        .classLoader!!
-                        .getResourceAsStream(nomeArquivoResources)
-                        .bufferedReader()
-                        .use { it.readText() })
+                setBody(lerArquivo(nomeArquivoResources))
             }
         )
     }

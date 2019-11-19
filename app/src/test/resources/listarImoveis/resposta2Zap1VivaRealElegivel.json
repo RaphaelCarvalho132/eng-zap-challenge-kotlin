@@ -1,0 +1,358 @@
+[
+  {
+    "usableAreas": 75,
+    "listingType": "USED",
+    "createdAt": "2018-02-26T22:35:07.369Z",
+    "listingStatus": "ACTIVE",
+    "id": "f03b84560320",
+    "parkingSpaces": 1,
+    "updatedAt": "2018-02-26T22:35:07.369Z",
+    "owner": false,
+    "images": [
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic7.jpg"
+    ],
+    "address": {
+      "city": "São Paulo",
+      "neighborhood": "Vila Brasilio Machado",
+      "geoLocation": {
+        "precision": "ROOFTOP",
+        "location": {
+          "lon": -46.614014,
+          "lat": -23.609441
+        }
+      }
+    },
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "pricingInfos": {
+      "yearlyIptu": "0",
+      "price": "480000",
+      "businessType": "SALE",
+      "monthlyCondoFee": "590"
+    }
+  },
+  {
+    "usableAreas": 360,
+    "listingType": "USED",
+    "createdAt": "2018-03-24T11:06:37.238Z",
+    "listingStatus": "ACTIVE",
+    "id": "53ad37eb6177",
+    "parkingSpaces": 4,
+    "updatedAt": "2018-03-25T11:06:37.238Z",
+    "owner": false,
+    "images": [
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic8.jpg"
+    ],
+    "address": {
+      "city": "São Paulo",
+      "neighborhood": "Real Parque",
+      "geoLocation": {
+        "precision": "ROOFTOP",
+        "location": {
+          "lon": -46.70559,
+          "lat": -23.606269
+        }
+      }
+    },
+    "bathrooms": 5,
+    "bedrooms": 4,
+    "pricingInfos": {
+      "yearlyIptu": "1500",
+      "price": "2200000",
+      "businessType": "SALE",
+      "monthlyCondoFee": "4100"
+    }
+  },
+  {
+    "usableAreas": 77,
+    "listingType": "USED",
+    "createdAt": "2018-05-08T00:29:38.179Z",
+    "listingStatus": "ACTIVE",
+    "id": "fed26dbe5881",
+    "parkingSpaces": 1,
+    "updatedAt": "2018-05-08T00:29:38.179Z",
+    "owner": false,
+    "images": [
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic19.jpg"
+    ],
+    "address": {
+      "city": "São Paulo",
+      "neighborhood": "Campo Belo",
+      "geoLocation": {
+        "precision": "ROOFTOP",
+        "location": {
+          "lon": -46.659002,
+          "lat": -23.553518
+        }
+      }
+    },
+    "bathrooms": 3,
+    "bedrooms": 3,
+    "pricingInfos": {
+      "period": "MONTHLY",
+      "yearlyIptu": "810",
+      "price": "3500",
+      "rentalTotalPrice": "4440",
+      "businessType": "RENTAL",
+      "monthlyCondoFee": "940"
+    }
+  },
+  {
+    "usableAreas": 75,
+    "listingType": "USED",
+    "createdAt": "2017-08-04T01:49:39.052Z",
+    "listingStatus": "ACTIVE",
+    "id": "1106a85a38fa",
+    "parkingSpaces": 1,
+    "updatedAt": "2017-08-04T01:49:39.052Z",
+    "owner": false,
+    "images": [
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic9.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic13.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic16.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic10.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic18.jpg"
+    ],
+    "address": {
+      "city": "São Paulo",
+      "neighborhood": "Brooklin",
+      "geoLocation": {
+        "precision": "RANGE_INTERPOLATED",
+        "location": {
+          "lon": 0,
+          "lat": 0
+        }
+      }
+    },
+    "bathrooms": 2,
+    "bedrooms": 2,
+    "pricingInfos": {
+      "period": "MONTHLY",
+      "yearlyIptu": "100",
+      "price": "2200",
+      "rentalTotalPrice": "3300",
+      "businessType": "RENTAL",
+      "monthlyCondoFee": "1100"
+    }
+  },
+  {
+    "usableAreas": 45,
+    "listingType": "USED",
+    "createdAt": "2018-03-26T14:26:20.327Z",
+    "listingStatus": "ACTIVE",
+    "id": "548289d0d1df",
+    "parkingSpaces": 1,
+    "updatedAt": "2018-03-26T14:26:20.327Z",
+    "owner": false,
+    "images": [
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic9.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic11.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic2.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic18.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic19.jpg"
+    ],
+    "address": {
+      "city": "São Paulo",
+      "neighborhood": "Jardim Íris",
+      "geoLocation": {
+        "precision": "ROOFTOP",
+        "location": {
+          "lon": -46.723175,
+          "lat": -23.501005
+        }
+      }
+    },
+    "bathrooms": 1,
+    "bedrooms": 2,
+    "pricingInfos": {
+      "period": "MONTHLY",
+      "yearlyIptu": "0",
+      "price": "1200",
+      "rentalTotalPrice": "1460",
+      "businessType": "RENTAL",
+      "monthlyCondoFee": "-1"
+    }
+  },
+  {
+    "usableAreas": 0,
+    "listingType": "USED",
+    "createdAt": "2017-05-09T11:20:43.564Z",
+    "listingStatus": "ACTIVE",
+    "id": "a4592d14a531",
+    "parkingSpaces": 2,
+    "updatedAt": "2017-05-09T11:20:43.564Z",
+    "owner": false,
+    "images": [
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic15.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic12.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic3.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic11.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic16.jpg"
+    ],
+    "address": {
+      "city": "São Paulo",
+      "neighborhood": "Vila Moinho Velho",
+      "geoLocation": {
+        "precision": "ROOFTOP",
+        "location": {
+          "lon": -46.601979,
+          "lat": -23.609364
+        }
+      }
+    },
+    "bathrooms": 3,
+    "bedrooms": 2,
+    "pricingInfos": {
+      "yearlyIptu": "266",
+      "price": "620000",
+      "businessType": "SALE",
+      "monthlyCondoFee": "1250"
+    }
+  },
+  {
+    "usableAreas": 173,
+    "listingType": "USED",
+    "createdAt": "2018-05-29T18:35:00.766Z",
+    "listingStatus": "ACTIVE",
+    "id": "2c60c7c4ddb2",
+    "parkingSpaces": 2,
+    "updatedAt": "2018-05-29T18:35:00.766Z",
+    "owner": false,
+    "images": [
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic20.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic6.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic5.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic3.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic12.jpg"
+    ],
+    "address": {
+      "city": "São Paulo",
+      "neighborhood": "Chácara Inglesa",
+      "geoLocation": {
+        "precision": "ROOFTOP",
+        "location": {
+          "lon": 0,
+          "lat": 0
+        }
+      }
+    },
+    "bathrooms": 0,
+    "bedrooms": 3,
+    "pricingInfos": {
+      "yearlyIptu": "0",
+      "price": "1050000",
+      "businessType": "SALE",
+      "monthlyCondoFee": "0"
+    }
+  },
+  {
+    "usableAreas": 100,
+    "listingType": "USED",
+    "createdAt": "2018-04-05T11:55:52.149Z",
+    "listingStatus": "ACTIVE",
+    "id": "bdcdfcc6cdd5",
+    "parkingSpaces": 2,
+    "updatedAt": "2018-04-05T11:55:52.149Z",
+    "owner": false,
+    "images": [
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic9.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic10.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic17.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic13.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic6.jpg"
+    ],
+    "address": {
+      "city": "São Paulo",
+      "neighborhood": "Bosque da Saúde",
+      "geoLocation": {
+        "precision": "ROOFTOP",
+        "location": {
+          "lon": -46.659002,
+          "lat": -23.553518
+        }
+      }
+    },
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "pricingInfos": {
+      "yearlyIptu": "0",
+      "price": "80000",
+      "businessType": "SALE",
+      "monthlyCondoFee": "0"
+    }
+  },
+  {
+    "usableAreas": 54,
+    "listingType": "USED",
+    "createdAt": "2018-06-14T04:50:58.067Z",
+    "listingStatus": "ACTIVE",
+    "id": "c4f6894e7b95",
+    "parkingSpaces": 2,
+    "updatedAt": "2018-06-14T04:50:58.067Z",
+    "owner": false,
+    "images": [
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic18.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic4.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic15.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic12.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic17.jpg"
+    ],
+    "address": {
+      "city": "São Paulo",
+      "neighborhood": "Cidade Monções",
+      "geoLocation": {
+        "precision": "ROOFTOP",
+        "location": {
+          "lon": -46.659002,
+          "lat": -23.553518
+        }
+      }
+    },
+    "bathrooms": 2,
+    "bedrooms": 0,
+    "pricingInfos": {
+      "period": "MONTHLY",
+      "yearlyIptu": "538",
+      "price": "2190",
+      "rentalTotalPrice": "3327",
+      "businessType": "RENTAL",
+      "monthlyCondoFee": ""
+    }
+  },
+  {
+    "usableAreas": 0,
+    "listingType": "USED",
+    "createdAt": "2018-04-26T14:24:51.829Z",
+    "listingStatus": "ACTIVE",
+    "id": "0b021863e09e",
+    "parkingSpaces": 2,
+    "updatedAt": "2018-04-26T14:24:51.829Z",
+    "owner": false,
+    "images": [
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic2.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic10.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic7.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic16.jpg",
+      "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic15.jpg"
+    ],
+    "address": {
+      "city": "São Paulo",
+      "neighborhood": "Paraisópolis",
+      "geoLocation": {
+        "precision": "ROOFTOP",
+        "location": {
+          "lon": -46.72602,
+          "lat": -23.609625
+        }
+      }
+    },
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "pricingInfos": {
+      "yearlyIptu": "60",
+      "price": "450000",
+      "businessType": "SALE",
+      "monthlyCondoFee": "365"
+    }
+  }
+]
