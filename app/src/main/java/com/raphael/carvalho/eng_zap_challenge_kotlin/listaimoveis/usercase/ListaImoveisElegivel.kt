@@ -5,10 +5,7 @@ import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.mod
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.PricingInfosVO.BusinessType.ALUGUEL
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.PricingInfosVO.BusinessType.VENDA
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.model.valorM2
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.DetalhesImovel
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.Imovel
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.ImovelVivaReal
-import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.ImovelZAP
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.*
 import java.math.BigDecimal
 
 /**
@@ -28,7 +25,7 @@ sealed class ListaImoveisElegivel {
     }
 
     abstract fun criarImovel(
-        tipoNegocio: String,
+        tipoNegocio: TipoNegocio,
         valor: String,
         periodo: String?,
         qtdQuartos: Int,
@@ -62,7 +59,7 @@ object ListaZAPElegivel : ListaImoveisElegivel() {
     }
 
     override fun criarImovel(
-        tipoNegocio: String,
+        tipoNegocio: TipoNegocio,
         valor: String,
         periodo: String?,
         qtdQuartos: Int,
@@ -114,7 +111,7 @@ object ListaVivaRealElegivel : ListaImoveisElegivel() {
     }
 
     override fun criarImovel(
-        tipoNegocio: String,
+        tipoNegocio: TipoNegocio,
         valor: String,
         periodo: String?,
         qtdQuartos: Int,

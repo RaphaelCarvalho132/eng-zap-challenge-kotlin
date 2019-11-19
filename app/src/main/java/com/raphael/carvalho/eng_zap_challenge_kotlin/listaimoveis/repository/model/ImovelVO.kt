@@ -2,6 +2,7 @@ package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.repository.mo
 
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.ListaImoveisElegivel
 import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.DetalhesImovel
+import com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model.TipoNegocio
 import java.math.BigDecimal
 
 /**
@@ -32,7 +33,7 @@ val ImovelVO.valorM2: BigDecimal
 
 fun ImovelVO.toImove(listaImoveisElegivel: ListaImoveisElegivel) =
     listaImoveisElegivel.criarImovel(
-        pricingInfos.businessType,
+        TipoNegocio.getTipoNegocio(pricingInfos.businessType),
         pricingInfos.price,
         pricingInfos.period,
         bedrooms,

@@ -37,7 +37,7 @@ internal class ImovelZAPTest {
         every { detalhesImovel.arredoresGrupoZAP } returns arredoresGrupoZAP
 
         return ImovelZAP(
-            "",
+            TipoNegocio.Venda,
             valor,
             null,
             0,

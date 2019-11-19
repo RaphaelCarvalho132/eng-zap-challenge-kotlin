@@ -42,7 +42,6 @@ class ListaImoveisViewModel(
                         map[ListaVivaRealElegivel]
                     )
                 )
-
             } catch (e: Exception) {
                 state.postValue(ErroCarregamento)
             }

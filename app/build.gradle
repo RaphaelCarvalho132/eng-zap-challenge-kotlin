@@ -43,6 +43,7 @@ dependencies {
     implementation 'com.jakewharton.timber:timber:4.7.1'
 
     implementation 'com.android.support:recyclerview-v7:29.0.0'
+    implementation 'com.android.support:design:29.0.0'
 
     // Testes unitarios
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'

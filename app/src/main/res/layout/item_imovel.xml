@@ -3,8 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="8dp">
 
     <TextView
         android:id="@+id/tv_tipo_negocio"
@@ -30,10 +33,14 @@
     <TextView
         android:id="@+id/tv_qtd_quartos"
         style="@style/TextAppearance.AppCompat.Small"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toStartOf="@+id/tv_qtd_banheiros"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_valor"
         tools:text="@string/qtd_quartos_1d" />
@@ -41,8 +48,10 @@
     <TextView
         android:id="@+id/tv_qtd_banheiros"
         style="@style/TextAppearance.AppCompat.Small"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toStartOf="@+id/tv_qtd_vagas"
         app:layout_constraintStart_toEndOf="@+id/tv_qtd_quartos"
         app:layout_constraintTop_toTopOf="@+id/tv_qtd_quartos"
@@ -51,8 +60,10 @@
     <TextView
         android:id="@+id/tv_qtd_vagas"
         style="@style/TextAppearance.AppCompat.Small"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toStartOf="@+id/tv_m2"
         app:layout_constraintStart_toEndOf="@+id/tv_qtd_banheiros"
         app:layout_constraintTop_toTopOf="@+id/tv_qtd_quartos"
@@ -61,21 +72,13 @@
     <TextView
         android:id="@+id/tv_m2"
         style="@style/TextAppearance.AppCompat.Small"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_qtd_vagas"
         app:layout_constraintTop_toTopOf="@+id/tv_qtd_quartos"
         tools:text="@string/m2_1d" />
-
-    <View
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/barrier" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
@@ -83,4 +86,13 @@
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="tv_qtd_quartos,tv_qtd_vagas,tv_qtd_banheiros,tv_m2" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier" />
 </androidx.constraintlayout.widget.ConstraintLayout>

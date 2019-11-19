@@ -37,7 +37,7 @@ internal class ImovelVivaRealTest {
         every { detalhesImovel.arredoresGrupoZAP } returns arredoresGrupoZAP
 
         return ImovelVivaReal(
-            "",
+            TipoNegocio.Aluguel,
             valor,
             null,
             0,

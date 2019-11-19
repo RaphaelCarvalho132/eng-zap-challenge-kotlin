@@ -1,12 +1,13 @@
 package com.raphael.carvalho.eng_zap_challenge_kotlin.listaimoveis.usercase.model
 
+import androidx.annotation.StringRes
 import java.math.BigDecimal
 
 /**
  * Classe com regra do ZAP
  */
 data class ImovelZAP(
-    override val tipoNegocio: String,
+    private val tipoNegocio: TipoNegocio,
     private val valor: String,
     private val periodo: String?,
     override val qtdQuartos: Int,
@@ -18,6 +19,10 @@ data class ImovelZAP(
     companion object {
         val desconto10Porcento = "0.9".toBigDecimal()
     }
+
+    @get:StringRes
+    override val nomeNegocio: Int
+        get() = getStringResTipoNegocio(tipoNegocio)
 
     override val valorImovel: BigDecimal
         get() {
